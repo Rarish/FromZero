@@ -1,0 +1,28 @@
+server:
+  port: 9616
+
+spring:
+  application:
+    name: potic
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3307/rbac?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&autoReconnect=true&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=false
+    password: zhouzuyi.com
+    username: root
+
+  redis:
+    port: 6379
+    host: localhost
+    password:
+    database: 0
+    timeout: 10s
+
+potic:
+  whiteList: /login;/singIn;/SingUp
+
+token:
+  privateKey: zhouzuyi.com
+  expireTime: 30 #分钟
+
+mybatis:
+  mapperLocations: classpath*:mapper/**/*Mapper.xml
